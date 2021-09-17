@@ -13,6 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - docker --version
       - docker build -t 437243966461.dkr.ecr.us-east-1.amazonaws.com/mysb:latest .
       - docker tag 437243966461.dkr.ecr.us-east-1.amazonaws.com/mysb:latest 437243966461.dkr.ecr.us-east-1.amazonaws.com/mysb:$IMAGE_TAG
   post_build:
